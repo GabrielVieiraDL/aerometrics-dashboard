@@ -4,7 +4,7 @@
 
 Uma Single Page Application (SPA) responsiva e moderna, desenvolvida para fornecer visualizações gerenciais em tempo real sobre a malha aérea, gargalos logísticos e On-Time Performance (OTP).
 
-![Aerometrics Logo](./logo_aerometrics_v2.png)
+![Aerometrics Logo](./assets/logo_aerometrics_v2.png)
 
 ## 🎯 Visão Geral
 O projeto **Aerometrics** atua na linha de frente do monitoramento de performance da aviação civil. Este dashboard web serve como portal de acesso aos relatórios do Power BI Embedded, trazendo métricas críticas como Efeito Cascata (Reactionary Delays), taxa de cancelamentos e custos contingenciais (Resolução ANAC nº 400).
