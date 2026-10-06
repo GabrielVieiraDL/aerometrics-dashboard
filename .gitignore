@@ -1,0 +1,55 @@
+# Ambientes e segredos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+
+# Graphify knowledge graph outputs
+graphify-out/
+.graphify_*
+
+# DependÃªncias
+node_modules/
+__pycache__/
+*.pyc
+bin/
+obj/
+target/
+.venv/
+env/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# IDE e logs
+.idea/
+.vscode/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Arquivos e Agentes Locais (Não essenciais para o Frontend)
+.agents/
+.claude/
+.gemini/
+docs/
+proj-analista-dados-temp/
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+agentes_universais.md
+*.csv
+*.py
+*.sql
+*.pdf
+*.ipynb
+logo_anac.png

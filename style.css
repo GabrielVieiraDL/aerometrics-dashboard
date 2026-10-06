@@ -1,0 +1,31 @@
+/* SPA Tab Transitions */
+        .tab-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .tab-content.active {
+            display: flex;
+            opacity: 1;
+        }
+        
+        /* Pipeline Animations (Esteira Operacional) */
+        @keyframes data-flow-horizontal {
+            0% { transform: translateX(-100%); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(200%); opacity: 0; }
+        }
+        .animate-data-flow {
+            animation: data-flow-horizontal 2s linear infinite;
+        }
+        
+        @keyframes data-flow-vertical {
+            0% { transform: translateY(-100%); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(200%); opacity: 0; }
+        }
+        .animate-data-flow-vertical {
+            animation: data-flow-vertical 2s linear infinite;
+        }
