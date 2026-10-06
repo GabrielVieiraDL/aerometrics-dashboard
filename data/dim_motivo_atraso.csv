@@ -1,0 +1,8 @@
+﻿Motivo_Codigo,Categoria_Motivo,Descricao_Motivo,Esfera_Responsavel
+PONTUAL,Operacao Normal,Partida dentro da margem D15,Companhia
+CLIMA,Condicoes Meteorologicas,"Teto baixo, nevoeiro ou tempestades severas",Forca Maior / Clima
+MANUT,Manutencao Nao Programada,Troca emergencial de componentes ou pane em aeronave (AOG),Companhia
+ATC,Trafego Aereo & Restricao de Slot,Controle de Espaco Aereo (DECEA/CGNA) e espera em solo,Infraestrutura / ATC
+CONEX,Efeito Cascata & Conexao de Passageiros,Atraso no trecho anterior da aeronave ou conexao critica,Companhia / Rede
+SOLO,Operacoes em Solo & Handling,"Abastecimento, esteira de bagagem, limpeza ou embarque lento",Empresa de Solo / Aeroporto
+CREW,Jornada Regulamentar da Tripulacao,Estouro de limite de jornada da Lei do Aeronauta,Companhia

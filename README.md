@@ -20,12 +20,19 @@ A interface foi construída seguindo princípios de Clean Code, garantindo um ca
 O frontend foi refatorado e componentizado nos seguintes arquivos essenciais:
 ```text
 /
-├── index.html            # Estrutura principal e chamadas de CDN
-├── style.css             # Estilos customizados (animações e transições)
-├── script.js             # Lógica de controle de estados e abas (SPA)
-├── tailwind.config.js    # Design System (paleta de cores e tipografia da marca)
-├── logo_aerometrics_v2.png # Asset visual (Globo/Avião)
-└── README.md             # Documentação do repositório
+├── index.html            # Estrutura principal
+├── tailwind.config.js    # Design System (paleta de cores)
+├── README.md             # Documentação
+├── css/
+│   └── style.css         # Estilos customizados
+├── js/
+│   └── script.js         # Lógica da SPA
+├── assets/
+│   └── logo_*            # Arquivos de imagem e marca
+├── data/
+│   └── *.csv             # Arquivos CSV da base de dados
+└── pbi/
+    └── .gitkeep          # Pasta reservada para os arquivos .pbix
 ```
 
 ## 🛠️ Como Executar

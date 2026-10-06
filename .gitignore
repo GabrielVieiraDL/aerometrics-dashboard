@@ -47,9 +47,9 @@ AGENTS.md
 CLAUDE.md
 GEMINI.md
 agentes_universais.md
-*.csv
+# *.csv permitidos
 *.py
 *.sql
 *.pdf
 *.ipynb
-logo_anac.png
+# logo_anac permitida

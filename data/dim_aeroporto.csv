@@ -1,0 +1,12 @@
+﻿Aeroporto_ICAO,Aeroporto_IATA,Nome_Aeroporto,Cidade,UF,Tipo_Hub,Capacidade_Horaria_Slots
+SBGR,GRU,Guarulhos Int.,Sao Paulo,SP,Hub Internacional & Conexoes,48
+SBSP,CGH,Congonhas,Sao Paulo,SP,Corporativo & Ponte Aerea,34
+SBRJ,SDU,Santos Dumont,Rio de Janeiro,RJ,Corporativo & Ponte Aerea,23
+SBGL,GIG,Galeao Int.,Rio de Janeiro,RJ,Internacional & Hub,40
+SBBR,BSB,Brasilia Int.,Brasilia,DF,Hub Conexoes Centro-Norte,45
+SBCF,CNF,Confins Int.,Belo Horizonte,MG,Hub Regional & Conexoes,32
+SBKP,VCP,Viracopos Int.,Campinas,SP,Hub Principal Azul,36
+SBSV,SSA,Salvador Int.,Salvador,BA,Hub Turistico Nordeste,28
+SBPA,POA,Salgado Filho Int.,Porto Alegre,RS,Hub Sul,26
+SBRF,REC,Recife Int.,Recife,PE,Hub Conexoes Nordeste,30
+SBCT,CWB,Afonso Pena Int.,Curitiba,PR,Hub Sul & Negocios,24

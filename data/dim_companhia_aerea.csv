@@ -1,0 +1,5 @@
+﻿Companhia_ICAO,Companhia_IATA,Nome_Empresa,Frota_Principal,OTP_Benchmark_Target
+GLO,G3,Gol Linhas Aereas,Boeing 737-800 / MAX,0.78
+TAM,LA,LATAM Airlines Brasil,Airbus A320 / A321,0.82
+AZU,AD,Azul Linhas Aereas,Embraer E2 / A320neo,0.84
+PTB,2Z,Voepass Linhas Aereas,ATR 72-600,0.69
