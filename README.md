@@ -2,6 +2,10 @@
   <img src="./assets/logo_aerometrics_v2.png" alt="Aerometrics Logo" width="180"/>
   <h1>🛫 Aerometrics Dashboard</h1>
   <p><strong>Consultoria de Dados Aéreos — Painel Executivo e Monitoramento</strong></p>
+  <br/>
+  <a href="https://lively-sky-0d8399010.5.azurestaticapps.net/">
+    <img src="https://img.shields.io/badge/Acesso%20Online-Azure%20Static%20Web%20Apps-005E9E?style=for-the-badge&logo=microsoftazure" alt="Deploy no Azure" />
+  </a>
 </div>
 
 Uma Single Page Application (SPA) responsiva e moderna, desenvolvida para fornecer visualizações gerenciais em tempo real sobre a malha aérea, gargalos logísticos e On-Time Performance (OTP).
