@@ -2,10 +2,23 @@
   <img src="./assets/logo_aerometrics_v2.png" alt="Aerometrics Logo" width="180"/>
   <h1>🛫 Aerometrics Dashboard</h1>
   <p><strong>Consultoria de Dados Aéreos — Painel Executivo e Monitoramento</strong></p>
+
+  <p>
+    <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" />
+    <img src="https://img.shields.io/badge/Azure_SQL-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure SQL" />
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  </p>
+
   <br/>
-  <a href="https://lively-sky-0d8399010.5.azurestaticapps.net/">
-    <img src="https://img.shields.io/badge/Acesso%20Online-Azure%20Static%20Web%20Apps-005E9E?style=for-the-badge&logo=microsoftazure" alt="Deploy no Azure" />
-  </a>
+
+  <h2>
+    <a href="https://lively-sky-0d8399010.5.azurestaticapps.net/">
+      👉 ACESSAR O DASHBOARD AO VIVO 👈
+    </a>
+  </h2>
 </div>
 
 Uma Single Page Application (SPA) responsiva e moderna, desenvolvida para fornecer visualizações gerenciais em tempo real sobre a malha aérea, gargalos logísticos e On-Time Performance (OTP).
