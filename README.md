@@ -45,8 +45,8 @@ O projeto foi construído para **arbitrar com dados um impasse da diretoria** no
 9. [Relatório Executivo: Recomendações](#-9-relatório-executivo-recomendações)
 10. [Pitch Executivo — Método STAR](#-10-pitch-executivo--método-star)
 11. [Estrutura do Repositório](#-11-estrutura-do-repositório)
-12. [Data Squad](#-13-data-squad)
-13. [Glossário](#-14-glossário)
+12. [Data Squad](#-12-data-squad)
+13. [Glossário](#-13-glossário)
 
 ---
 
