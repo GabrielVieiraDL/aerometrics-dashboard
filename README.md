@@ -8,18 +8,12 @@
 
   <p>
     <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" />
-    <img src="https://img.shields.io/badge/DAX-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="DAX" />
-    <img src="https://img.shields.io/badge/Azure_SQL-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure SQL" />
+        <img src="https://img.shields.io/badge/Azure_SQL-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure SQL" />
     <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
     <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
-    <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
-    <br/>
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
     <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-    <img src="https://img.shields.io/badge/Azure_Static_Web_Apps-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure Static Web Apps" />
-    <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions" />
-  </p>
 
   <br/>
 
@@ -51,10 +45,8 @@ O projeto foi construído para **arbitrar com dados um impasse da diretoria** no
 9. [Relatório Executivo: Recomendações](#-9-relatório-executivo-recomendações)
 10. [Pitch Executivo — Método STAR](#-10-pitch-executivo--método-star)
 11. [Estrutura do Repositório](#-11-estrutura-do-repositório)
-12. [Como Executar](#️-12-como-executar)
-13. [Data Squad](#-13-data-squad)
-14. [Glossário](#-14-glossário)
-15. [Referências](#-15-referências)
+12. [Data Squad](#-13-data-squad)
+13. [Glossário](#-14-glossário)
 
 ---
 
@@ -70,33 +62,16 @@ O projeto foi construído para **arbitrar com dados um impasse da diretoria** no
 | 💸 **Custo da assistência material (Res. ANAC 400)** | **R$ 26,4 milhões** |
 | 🚀 **Ganho estimado com as recomendações** | **+7,2 p.p.** de OTP D15 global e **mais de R$ 14,8 milhões** a menos em custos contingenciais |
 
-> **Veredito dos dados:** a tese de que os atrasos são *100% exógenos* **não se sustenta**. Mais da metade dos atrasos está sob controle direto das companhias. Isso confirma o diagnóstico do CFO e mostra onde agir para reduzir custos.
-
+> **Veredito dos dados:** a tese de que os atrasos são *100% exógenos* **não se sustenta**. Mais da metade dos atrasos está sob controle direto das companhias.
 ---
 
-## 🧭 2. Contexto do Negócio: O Dilema C-Level
+## 🧭 2. Contexto do Negócio: O Dilema 
 
-Nossa equipe atuou como a **célula de Inteligência de Dados do CCO** durante uma severa crise de pontualidade:
 
 | 👨‍✈️ Diretor de Operações (COO) | 💼 Diretor Financeiro (CFO) |
 |---|---|
 | "A culpa é **100% exógena**: condições meteorológicas e restrições de infraestrutura de tráfego aéreo (DECEA/CGNA)." | "Temos um rombo de **R$ 26,4 milhões** em assistência material (Res. ANAC 400) por causa de uma **malha apertada** e de **falhas de manutenção**." |
 
-```
-                 +-------------------------------------------+
-                 |    DILEMA EXECUTIVO: SESSÃO DE CRISE CCO   |
-                 +-------------------------------------------+
-                                       |
-            +--------------------------+--------------------------+
-            |                                                     |
-     [ COO: causa exógena ]                             [ CFO: causa interna ]
-     Clima + ATC/Infraestrutura                         Malha apertada + Manutenção
-            |                                                     |
-            +--------------------------+--------------------------+
-                                       |
-                        [ AEROMETRICS — DATA SQUAD ]
-        Python ETL -> Azure SQL (Star Schema) -> Power BI (DAX) -> Web App
-```
 
 **Missão:** analisar os dados de operações de voo da ANAC e **resolver a divergência com evidências**, usando modelagem dimensional, SQL analítico e painéis gerenciais.
 
@@ -120,7 +95,7 @@ O portal **Aerometrics** é uma SPA leve, em HTML, Tailwind CSS e JavaScript pur
 
 | Aba | Conteúdo |
 |---|---|
-| 📊 **Dashboard** | Relatório **Power BI** incorporado (`Projeto Generation Brasil - Anac - V008`) com `pageView=fitToWidth` e proporção 16:9 sem faixas pretas |
+| 📊 **Dashboard** | Relatório **Power BI** incorporado |
 | ⚡ **Insights** | **Relatório Executivo** com as recomendações estratégicas, cada uma dividida em *Diagnóstico Operacional*, *Solução Proposta* e *Impacto Esperado* |
 | ℹ️ **Sobre o Projeto** | Documentação da arquitetura de dados, da esteira operacional e do time (*Meet Our Team*) |
 
@@ -129,16 +104,6 @@ O portal **Aerometrics** é uma SPA leve, em HTML, Tailwind CSS e JavaScript pur
 - **Design System** próprio no `tailwind.config.js`, com a paleta da marca Aerometrics (`#005E9E`, `#2EB2B4`, `#1E2E3B`, `#87A4BB`) e as fontes Inter e Roboto.
 - **Layout de tela travada** (`h-screen` + `min-h-0`), com rolagem só na área interna, para uma experiência parecida com a de um aplicativo.
 - **CI/CD com GitHub Actions**: cada `push` na `main` publica automaticamente no Azure Static Web Apps.
-
-### 📸 Telas da aplicação
-
-[Insira a imagem da aba Dashboard (Power BI incorporado) Aqui]
-
-[Insira a imagem da aba Insights (Relatório Executivo) Aqui]
-
-[Insira a imagem da aba Sobre o Projeto (Arquitetura + Data Squad) Aqui]
-
-> 💡 Dica: salve as capturas em `assets/screenshots/` e use `![Dashboard](./assets/screenshots/dashboard.png)`.
 
 ---
 
@@ -221,17 +186,6 @@ erDiagram
     }
 ```
 
-### 📋 Dicionário das Tabelas
-
-| Tabela | Tipo | Registros | Conteúdo |
-|---|---|---|---|
-| `fato_operacoes_voos_anac` | 🟦 Fato | 5.500 | Etapas de voo de 2024: rota, horário previsto, minutos de atraso, status D15, motivo, custo de contingência e passageiros |
-| `dim_companhia_aerea` | 🟩 Dimensão | 4 | Gol (GLO), LATAM (TAM), Azul (AZU) e Voepass (PTB), com frota e **meta contratual de OTP** |
-| `dim_aeroporto` | 🟩 Dimensão | 11 | GRU, CGH, SDU, GIG, BSB, CNF, VCP, SSA, POA, REC e CWB, com tipo de hub e capacidade horária de slots |
-| `dim_motivo_atraso` | 🟩 Dimensão | 7 | PONTUAL, CLIMA, MANUT, ATC, CONEX, SOLO e CREW, com a **esfera responsável** |
-
-> 💡 **Decisão de design:** o atributo `Esfera_Responsavel` da `dim_motivo_atraso` foi decisivo para resolver o dilema. Ele separa de forma objetiva as causas **controláveis pela companhia** (MANUT, CONEX, CREW) das **exógenas** (CLIMA, ATC) e das de **solo/aeroporto** (SOLO).
-
 ---
 
 ## 🛠️ 7. Tecnologias e Metodologias
@@ -257,70 +211,6 @@ erDiagram
 | 🔗 **Reactionary Delays** | Medição dos atrasos herdados de etapas anteriores (efeito cascata) |
 | 🚦 **Análise de Filas** | Identificação de hubs saturados e janelas de pico que viram gargalos |
 
-### Exemplos de SQL analítico
-
-**OTP D15 por companhia vs. meta contratual**
-```sql
-WITH otp AS (
-    SELECT Companhia_ICAO,
-           COUNT(*) AS voos_operados,
-           SUM(CASE WHEN Status_Pontualidade = 'Pontual (D15)' THEN 1 ELSE 0 END) AS voos_pontuais
-    FROM fato_operacoes_voos_anac
-    WHERE Status_Pontualidade <> 'Cancelado'
-    GROUP BY Companhia_ICAO
-)
-SELECT c.Nome_Empresa,
-       ROUND(100.0 * o.voos_pontuais / o.voos_operados, 1)                     AS otp_d15_pct,
-       100 * c.OTP_Benchmark_Target                                             AS meta_pct,
-       ROUND(100.0 * o.voos_pontuais / o.voos_operados - 100 * c.OTP_Benchmark_Target, 1) AS gap_pp,
-       RANK() OVER (ORDER BY 1.0 * o.voos_pontuais / o.voos_operados DESC)      AS ranking
-FROM otp o
-JOIN dim_companhia_aerea c ON c.Companhia_ICAO = o.Companhia_ICAO;
-```
-
-**Pareto de causas (% acumulado) por esfera responsável**
-```sql
-WITH causas AS (
-    SELECT m.Categoria_Motivo, m.Esfera_Responsavel, COUNT(*) AS voos_atrasados
-    FROM fato_operacoes_voos_anac f
-    JOIN dim_motivo_atraso m ON m.Motivo_Codigo = f.Motivo_Atraso_Codigo
-    WHERE f.Motivo_Atraso_Codigo <> 'PONTUAL'
-    GROUP BY m.Categoria_Motivo, m.Esfera_Responsavel
-)
-SELECT *,
-       ROUND(100.0 * voos_atrasados / SUM(voos_atrasados) OVER (), 2)                                AS pct,
-       ROUND(100.0 * SUM(voos_atrasados) OVER (ORDER BY voos_atrasados DESC) / SUM(voos_atrasados) OVER (), 2) AS pct_acumulado
-FROM causas
-ORDER BY voos_atrasados DESC;
-```
-
-**Efeito Cascata: participação de cada hub**
-```sql
-SELECT a.Aeroporto_IATA,
-       COUNT(*) AS etapas_em_cascata,
-       ROUND(100.0 * COUNT(*) / SUM(COUNT(*)) OVER (), 2) AS pct_efeito_cascata
-FROM fato_operacoes_voos_anac f
-JOIN dim_aeroporto a ON a.Aeroporto_ICAO = f.Aeroporto_Origem_ICAO
-WHERE f.Motivo_Atraso_Codigo = 'CONEX'
-GROUP BY a.Aeroporto_IATA
-ORDER BY pct_efeito_cascata DESC;
-```
-
-### Exemplos de medidas DAX
-```DAX
-OTP D15 % =
-DIVIDE (
-    CALCULATE ( COUNTROWS ( fato_operacoes_voos_anac ),
-                fato_operacoes_voos_anac[Status_Pontualidade] = "Pontual (D15)" ),
-    CALCULATE ( COUNTROWS ( fato_operacoes_voos_anac ),
-                fato_operacoes_voos_anac[Status_Pontualidade] <> "Cancelado" )
-)
-
-Gap vs Meta (p.p.) = ( [OTP D15 %] - MAX ( dim_companhia_aerea[OTP_Benchmark_Target] ) ) * 100
-
-Custo ANAC 400 = SUM ( fato_operacoes_voos_anac[Custo_Contingencia_BRL] )
-```
-
 ---
 
 ## 💡 8. Principais Insights e Resultados
@@ -333,7 +223,6 @@ Custo ANAC 400 = SUM ( fato_operacoes_voos_anac[Custo_Contingencia_BRL] )
 | 🥈 2º | LATAM (TAM) | 71,4% | 82% | 🔴 -10,6 p.p. |
 | 🥉 3º | Gol (GLO) | 68,4% | 78% | 🔴 -9,6 p.p. |
 | 4º | Voepass (PTB) | 62,3% | 69% | 🔴 -6,7 p.p. |
-| — | **Sistema** | **70,4%** | — | — |
 
 ➡️ **Nenhuma companhia atingiu a meta contratual.** O problema é **sistêmico**, não de um único operador. A taxa de cancelamento foi de **2,76%** (152 voos).
 
@@ -424,9 +313,6 @@ As recomendações abaixo estão na aba **Insights** da aplicação:
 | **A — Ação** | Construímos um pipeline Python → Azure SQL com Star Schema (Kimball), aplicamos SQL analítico (CTEs, Window Functions) para o Pareto e o Efeito Cascata, criamos o painel no Power BI com DAX e o publicamos em uma SPA no Azure Static Web Apps com CI/CD. |
 | **R — Resultado** | Mostramos que **50,46% dos atrasos são controláveis**, que **nenhuma companhia bate a meta de OTP D15** e que **GRU concentra 29,77% do Efeito Cascata**. Propusemos ações com potencial de **+7,2 p.p. de OTP** e **mais de R$ 14,8 milhões de economia**. |
 
-**🗣️ Elevator pitch (30 segundos):**
-> "A diretoria de uma companhia aérea discordava sobre a causa dos atrasos. Montamos um pipeline em nuvem com Python, Azure SQL e Power BI e provamos que metade dos atrasos era controlável. A maior causa nem era o clima, e sim o efeito cascata, com Guarulhos respondendo por quase 30% dele. Propusemos buffers nos picos e uma reserva tática que podem elevar a pontualidade em 7,2 pontos e economizar mais de R$ 14,8 milhões. Tudo está publicado em um portal web."
-
 ---
 
 ## 📁 11. Estrutura do Repositório
@@ -460,23 +346,7 @@ aerometrics-dashboard/
 
 ---
 
-## ▶️ 12. Como Executar
-
-Como a aplicação roda **toda no navegador** e não tem dependências locais (`node_modules`), basta:
-
-1. Clonar o repositório:
-   ```bash
-   git clone https://github.com/GabrielVieiraDL/aerometrics-dashboard.git
-   ```
-2. Abrir o `index.html` em qualquer navegador moderno (Chrome, Edge, Firefox ou Safari).
-   - *(Opcional)* Use o **Live Server** do VS Code para recarregar automaticamente durante as edições.
-3. Para explorar o modelo analítico, abra `pbi/Projeto Generation Brasil - Anac - V008.pbix` no **Power BI Desktop**.
-
-> **Deploy:** todo `push` na branch `main` dispara o workflow do GitHub Actions, que publica automaticamente no Azure Static Web Apps.
-
----
-
-## 👥 13. Data Squad
+## 👥 12. Data Squad
 
 Projeto desenvolvido de forma **colaborativa** pela equipe Aerometrics no Bootcamp de Análise de Dados da **Generation Brasil**.
 
@@ -497,7 +367,7 @@ Projeto desenvolvido de forma **colaborativa** pela equipe Aerometrics no Bootca
 
 ---
 
-## 📖 14. Glossário
+## 📖 13. Glossário
 
 | Termo | Significado |
 |---|---|
@@ -511,16 +381,6 @@ Projeto desenvolvido de forma **colaborativa** pela equipe Aerometrics no Bootca
 | **Res. ANAC 400** | Condições Gerais de Transporte Aéreo, incluindo a assistência material ao passageiro |
 | **Lei do Aeronauta** | Lei nº 13.475/2017, que define os limites de jornada das tripulações |
 | **Star Schema** | Modelo dimensional com uma tabela fato central ligada a dimensões |
-
----
-
-## 📚 15. Referências
-
-- ANAC — [Resolução nº 400, de 13 de dezembro de 2016](https://www.anac.gov.br/assuntos/legislacao/legislacao-1/resolucoes/resolucoes-2016/resolucao-no-400-13-12-2016)
-- Ministério dos Transportes — [Análises de Pareto: o que é e para que serve](https://www.gov.br/transportes/pt-br/assuntos/portal-da-estrategia/artigos-gestao-estrategica/analises-de-pareto-o-que-e-e-para-que-serve)
-- Generation Brasil — [Case 04: ANAC Operações de Voos](https://github.com/conteudoGeneration/proj-analista-dados/tree/main/case-04-anac-operacoes-voos)
-- Repositório complementar — [robertasalyna/projeto_anac](https://github.com/robertasalyna/projeto_anac)
-- KIMBALL, R.; ROSS, M. *The Data Warehouse Toolkit*. 3. ed. Wiley, 2013.
 
 ---
 
