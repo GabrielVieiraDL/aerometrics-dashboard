@@ -114,7 +114,7 @@
 
         <!-- Aba 2: Insights -->
                 <section id="tab-insights" class="tab-content absolute inset-0 overflow-y-auto bg-slate-50 p-3.5 sm:p-6 md:p-8 flex-col items-center">
-            <div class="max-w-6xl w-full mx-auto space-y-8 pb-10">
+            <div class="max-w-6xl w-full mx-auto space-y-8 pb-20 sm:pb-12">
                 <div class="text-center mb-6 sm:mb-10">
                     <h2 class="text-2xl sm:text-3xl font-bold text-anac-blue font-brand">Relatório Executivo</h2>
                 </div>
@@ -204,7 +204,7 @@
         <!-- Aba 2: Sobre o Projeto -->
         <!-- Ajuste 3: overflow-y-auto no section em position absolute preenchendo o painel garante a barra de rolagem -->
         <section id="tab-sobre" class="tab-content absolute inset-0 overflow-y-auto bg-slate-50 p-3.5 sm:p-6 md:p-8 flex-col items-center">
-            <div class="max-w-5xl w-full space-y-8 pb-10">
+            <div class="max-w-5xl w-full space-y-8 pb-20 sm:pb-12">
                 
                 <div class="text-center mb-8">
                     <h2 class="text-3xl font-bold text-anac-blue font-brand">Documentação Executiva</h2>
@@ -521,9 +521,15 @@
         </section>
     </main>
 
-    <!-- 4.3 Footer -->
-    <footer id="main-footer" class="hidden bg-[#1E2E3B] py-3 text-center text-xs text-anac-slate font-medium z-10 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] shrink-0">
-        Aerometrics — Consultoria de Dados Aéreos @ Generation 2026
+    <!-- 4.3 Footer (Fino, Elegante e com suporte a Safe Area do iPhone) -->
+    <footer id="main-footer" class="hidden bg-[#1E2E3B]/95 backdrop-blur-md pt-2 pb-[max(0.65rem,env(safe-area-inset-bottom,16px))] px-4 text-center text-[10px] sm:text-xs text-slate-300 font-medium z-20 shadow-[0_-4px_12px_rgba(0,0,0,0.15)] shrink-0 border-t border-slate-700/60">
+        <div class="flex items-center justify-center gap-1.5 sm:gap-2 tracking-wide leading-tight">
+            <span>Aerometrics &copy; 2026</span>
+            <span class="text-slate-500">&bull;</span>
+            <span>Consultoria de Dados Aéreos</span>
+            <span class="hidden sm:inline text-slate-500">&bull;</span>
+            <span class="hidden sm:inline text-[#2EB2B4] font-semibold">Generation Brasil</span>
+        </div>
     </footer>
 
     <!-- Lógica da SPA (Zero Friction) -->
