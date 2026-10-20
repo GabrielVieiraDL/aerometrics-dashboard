@@ -18,7 +18,11 @@
     <!-- Tailwind Configuration (Aerometrics Design System) -->
     <script src="tailwind.config.js"></script>
 
-    <link rel="stylesheet" href="css/style.css">
+        <!-- Cache Control (Garante atualizacoes imediatas em smartphones) -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet" href="css/style.css?v=3.0">
 </head>
 <!-- Ajuste 1: Trocado min-h-screen por h-screen para travar a tela externa e permitir scroll na área interna -->
 <body class="bg-gradient-to-b from-anac-bgStart to-anac-bgEnd h-screen h-[100dvh] flex flex-col font-sans text-slate-800 overflow-hidden">
@@ -198,6 +202,17 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Footer Fino e Elegante (Integrado ao fluxo, 100% seguro contra sobreposicao no iPhone) -->
+                <footer class="w-full mt-12 pt-6 pb-16 text-center border-t border-slate-200/80">
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2.5 text-xs text-slate-400 font-medium tracking-wide">
+                        <span>Aerometrics &copy; 2026</span>
+                        <span class="hidden sm:inline text-slate-300">&bull;</span>
+                        <span>Consultoria de Dados Aéreos</span>
+                        <span class="hidden sm:inline text-slate-300">&bull;</span>
+                        <span class="text-[#005E9E] font-semibold">Generation Brasil</span>
+                    </div>
+                </footer>
             </div>
         </section>
 
@@ -517,22 +532,24 @@
                     </div>
                 </div>
 
+                <!-- Footer Fino e Elegante (Integrado ao fluxo, 100% seguro contra sobreposicao no iPhone) -->
+                <footer class="w-full mt-12 pt-6 pb-16 text-center border-t border-slate-200/80">
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2.5 text-xs text-slate-400 font-medium tracking-wide">
+                        <span>Aerometrics &copy; 2026</span>
+                        <span class="hidden sm:inline text-slate-300">&bull;</span>
+                        <span>Consultoria de Dados Aéreos</span>
+                        <span class="hidden sm:inline text-slate-300">&bull;</span>
+                        <span class="text-[#005E9E] font-semibold">Generation Brasil</span>
+                    </div>
+                </footer>
+
             </div>
         </section>
     </main>
 
-    <!-- 4.3 Footer (Fino, Elegante e com suporte a Safe Area do iPhone) -->
-    <footer id="main-footer" class="hidden bg-[#1E2E3B]/95 backdrop-blur-md pt-2 pb-[max(0.65rem,env(safe-area-inset-bottom,16px))] px-4 text-center text-[10px] sm:text-xs text-slate-300 font-medium z-20 shadow-[0_-4px_12px_rgba(0,0,0,0.15)] shrink-0 border-t border-slate-700/60">
-        <div class="flex items-center justify-center gap-1.5 sm:gap-2 tracking-wide leading-tight">
-            <span>Aerometrics &copy; 2026</span>
-            <span class="text-slate-500">&bull;</span>
-            <span>Consultoria de Dados Aéreos</span>
-            <span class="hidden sm:inline text-slate-500">&bull;</span>
-            <span class="hidden sm:inline text-[#2EB2B4] font-semibold">Generation Brasil</span>
-        </div>
-    </footer>
+
 
     <!-- Lógica da SPA (Zero Friction) -->
-    <script src="js/script.js" defer></script>
+    <script src="js/script.js?v=3.0" defer></script>
 </body>
 </html>
