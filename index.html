@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Aerometrics</title>
     
     <!-- Favicon -->
@@ -21,41 +21,52 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <!-- Ajuste 1: Trocado min-h-screen por h-screen para travar a tela externa e permitir scroll na área interna -->
-<body class="bg-gradient-to-b from-anac-bgStart to-anac-bgEnd h-screen flex flex-col font-sans text-slate-800 overflow-hidden">
+<body class="bg-gradient-to-b from-anac-bgStart to-anac-bgEnd h-screen h-[100dvh] flex flex-col font-sans text-slate-800 overflow-hidden">
 
     <!-- 4.1 Header (Topo Institucional) -->
-    <header class="bg-gradient-to-r from-[#1E2E3B] via-[#005E9E] to-[#2EB2B4] text-anac-light flex justify-between items-end px-4 pt-2 shadow-sm z-10 shrink-0">
+        <header class="bg-gradient-to-r from-[#1E2E3B] via-[#005E9E] to-[#2EB2B4] text-anac-light flex flex-col md:flex-row md:justify-between md:items-end px-3 sm:px-4 pt-2 shadow-sm z-20 shrink-0">
 
-        <div class="flex items-center gap-3 pb-2">
-            <!-- Logo Aerometrics (Refinado) -->
-            <img src="assets/logo_aerometrics_v2.png" alt="Logo Aerometrics" class="h-8 w-8 object-contain drop-shadow-lg mix-blend-screen" />
-            <div class="flex flex-col justify-center">
-                <h1 class="font-brand font-black text-lg tracking-[0.2em] uppercase leading-none text-white drop-shadow-sm">AEROMETRICS</h1>
-                <h2 class="text-[9px] text-[#87A4BB] tracking-[0.15em] uppercase mt-0.5 font-semibold">Consultoria de Dados Aéreos</h2>
+        <!-- Top Row: Brand & Mobile GitHub button -->
+        <div class="flex items-center justify-between pb-2 md:pb-2">
+            <div class="flex items-center gap-2.5 sm:gap-3">
+                <!-- Logo Aerometrics (Refinado) -->
+                <img src="assets/logo_aerometrics_v2.png" alt="Logo Aerometrics" class="h-7 w-7 sm:h-8 sm:w-8 object-contain drop-shadow-lg mix-blend-screen" />
+                <div class="flex flex-col justify-center">
+                    <h1 class="font-brand font-black text-base sm:text-lg tracking-[0.2em] uppercase leading-none text-white drop-shadow-sm">AEROMETRICS</h1>
+                    <h2 class="text-[8px] sm:text-[9px] text-[#87A4BB] tracking-[0.15em] uppercase mt-0.5 font-semibold">Consultoria de Dados Aéreos</h2>
+                </div>
             </div>
+
+            <!-- Mobile GitHub Link -->
+            <a href="https://github.com/GabrielVieiraDL/aerometrics-dashboard" target="_blank" rel="noopener noreferrer" class="md:hidden flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-medium transition-all" title="Ver no GitHub">
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span>GitHub</span>
+            </a>
         </div>
 
         <!-- Navegação de Abas -->
-        <nav class="flex gap-1">
-            <button onclick="switchTab('dashboard')" id="btn-dashboard" class="flex items-center gap-1.5 px-3 py-1.5 border-b-2 border-white bg-white/15 text-white text-xs font-bold transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <nav class="flex w-full md:w-auto border-t md:border-t-0 border-white/10 pt-1 md:pt-0 gap-1 overflow-x-auto no-scrollbar">
+            <button onclick="switchTab('dashboard')" id="btn-dashboard" class="flex-1 md:flex-initial flex items-center justify-center gap-1.5 px-3 py-2 md:py-1.5 border-b-2 border-white bg-white/15 text-white text-xs font-bold transition-all whitespace-nowrap">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
                 Dashboard
             </button>
-            <button onclick="switchTab('insights')" id="btn-insights" class="flex items-center gap-1.5 px-3 py-1.5 border-b-2 border-transparent hover:bg-white/10 text-white/70 hover:text-white text-xs font-medium transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <button onclick="switchTab('insights')" id="btn-insights" class="flex-1 md:flex-initial flex items-center justify-center gap-1.5 px-3 py-2 md:py-1.5 border-b-2 border-transparent hover:bg-white/10 text-white/70 hover:text-white text-xs font-medium transition-all whitespace-nowrap">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
                 Insights
             </button>
-            <button onclick="switchTab('sobre')" id="btn-sobre" class="flex items-center gap-1.5 px-3 py-1.5 border-b-2 border-transparent hover:bg-white/10 text-white/70 hover:text-white text-xs font-medium transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <button onclick="switchTab('sobre')" id="btn-sobre" class="flex-1 md:flex-initial flex items-center justify-center gap-1.5 px-3 py-2 md:py-1.5 border-b-2 border-transparent hover:bg-white/10 text-white/70 hover:text-white text-xs font-medium transition-all whitespace-nowrap">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                Sobre o Projeto
+                <span>Sobre<span class="hidden sm:inline"> o Projeto</span></span>
             </button>
-            <a href="https://github.com/GabrielVieiraDL/aerometrics-dashboard" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 border-b-2 border-transparent hover:bg-white/10 text-white/70 hover:text-white text-xs font-medium transition-all ml-2" title="Repositório Oficial">
+            <a href="https://github.com/GabrielVieiraDL/aerometrics-dashboard" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center gap-1.5 px-3 py-1.5 border-b-2 border-transparent hover:bg-white/10 text-white/70 hover:text-white text-xs font-medium transition-all ml-2" title="Repositório Oficial">
                 <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="currentColor">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
@@ -70,8 +81,25 @@
     <main class="flex-1 w-full relative min-h-0 bg-white">
         
         <!-- Aba 1: Dashboard Operacional (Iframe Placeholder) -->
-        <section id="tab-dashboard" class="tab-content active absolute inset-0 bg-slate-200 overflow-y-auto overflow-x-hidden !block">
-            <div style="width: 100%; height: calc(56.25vw + 38px); min-height: 600px;">
+                <section id="tab-dashboard" class="tab-content active absolute inset-0 bg-slate-900 overflow-y-auto overflow-x-hidden flex-col !block">
+            <!-- Barra de Dica Mobile (Visível apenas em smartphones) -->
+            <div class="md:hidden bg-gradient-to-r from-slate-900 via-[#005E9E] to-slate-900 text-white px-3.5 py-2 flex items-center justify-between border-b border-white/10 shrink-0">
+                <div class="flex items-center gap-2">
+                    <span class="text-sm">🔄</span>
+                    <div>
+                        <p class="font-bold text-[11px] leading-tight">Visualização Mobile</p>
+                        <p class="text-[9px] text-blue-200">Gire o celular na horizontal para explorar o painel</p>
+                    </div>
+                </div>
+                <button onclick="toggleFullScreen()" class="flex items-center gap-1 bg-white text-slate-900 hover:bg-blue-50 font-bold px-2.5 py-1 rounded-md text-[10px] shadow-sm transition-all active:scale-95 shrink-0">
+                    <svg class="w-3 h-3 text-anac-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
+                    </svg>
+                    Tela Cheia
+                </button>
+            </div>
+
+            <div class="w-full h-[calc(100%-40px)] md:h-[calc(56.25vw+38px)] min-h-[300px] md:min-h-[600px] relative">
                 <!-- Power BI Embedded Iframe -->
                 <iframe 
                     id="pbi-iframe" 
@@ -85,10 +113,10 @@
         </section>
 
         <!-- Aba 2: Insights -->
-                <section id="tab-insights" class="tab-content absolute inset-0 overflow-y-auto bg-slate-50 p-8 flex-col items-center">
+                <section id="tab-insights" class="tab-content absolute inset-0 overflow-y-auto bg-slate-50 p-3.5 sm:p-6 md:p-8 flex-col items-center">
             <div class="max-w-6xl w-full mx-auto space-y-8 pb-10">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl font-bold text-anac-blue font-brand">Relatório Executivo</h2>
+                <div class="text-center mb-6 sm:mb-10">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-anac-blue font-brand">Relatório Executivo</h2>
                 </div>
                 
                 <div class="grid grid-cols-1 gap-8">
@@ -175,7 +203,7 @@
 
         <!-- Aba 2: Sobre o Projeto -->
         <!-- Ajuste 3: overflow-y-auto no section em position absolute preenchendo o painel garante a barra de rolagem -->
-        <section id="tab-sobre" class="tab-content absolute inset-0 overflow-y-auto bg-slate-50 p-8 flex-col items-center">
+        <section id="tab-sobre" class="tab-content absolute inset-0 overflow-y-auto bg-slate-50 p-3.5 sm:p-6 md:p-8 flex-col items-center">
             <div class="max-w-5xl w-full space-y-8 pb-10">
                 
                 <div class="text-center mb-8">
@@ -208,7 +236,7 @@
                             <div class="w-full flex flex-col md:flex-row items-center justify-between gap-1 mt-8">
                                 
                                 <!-- Step 1: CSV -->
-                                <div class="flex-none w-[75px] md:w-20 lg:w-24 bg-white border border-slate-200 rounded-xl p-2 lg:p-3 flex flex-col items-center text-center shadow-sm relative z-10 hover:-translate-y-1 transition-transform">
+                                <div class="flex-none w-36 sm:w-44 md:w-20 lg:w-24 bg-white border border-slate-200 rounded-xl p-2.5 sm:p-3 flex flex-col items-center text-center shadow-sm relative z-10 hover:-translate-y-1 transition-transform">
                                     <div class="w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center mb-1 lg:mb-2">
                                         <svg viewBox="0 0 24 24" fill="none" class="w-full h-full drop-shadow-sm">
                                             <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" fill="#E2E8F0"/>
@@ -230,15 +258,15 @@
                                         <div class="absolute -right-1 text-slate-300 bg-white rounded-full"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M7 3l7 7-7 7V3z"/></svg></div>
                                     </div>
                                 </div>
-                                <div class="md:hidden flex flex-col items-center relative h-12 w-full my-2">
-                                    <span class="absolute top-1/2 -translate-y-1/2 translate-x-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider text-center">Ingestão / Pandas</span>
-                                    <div class="h-full w-[3px] bg-slate-100 overflow-hidden rounded-full relative">
+                                <div class="md:hidden flex flex-col items-center justify-center relative h-12 w-full my-1">
+                                    <span class="bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider text-center shadow-xs z-10 mb-1 border border-slate-200">Ingestão / Pandas</span>
+                                    <div class="h-6 w-[3px] bg-slate-200 overflow-hidden rounded-full relative">
                                         <div class="w-full h-full bg-gradient-to-b from-transparent via-blue-500 to-transparent animate-data-flow-vertical"></div>
                                     </div>
                                 </div>
 
                                 <!-- Step 2: Python -->
-                                <div class="flex-none w-[75px] md:w-20 lg:w-24 bg-white border border-slate-200 rounded-xl p-2 lg:p-3 flex flex-col items-center text-center shadow-sm relative z-10 hover:border-blue-300 hover:-translate-y-1 transition-all">
+                                <div class="flex-none w-36 sm:w-44 md:w-20 lg:w-24 bg-white border border-slate-200 rounded-xl p-2.5 sm:p-3 flex flex-col items-center text-center shadow-sm relative z-10 hover:border-blue-300 hover:-translate-y-1 transition-all">
                                     <div class="w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center mb-1 lg:mb-2">
                                         <svg viewBox="0 0 110 110" class="w-full h-full drop-shadow-sm">
                                             <path d="M53.7,8.2C25.1,8.2,25.6,20.6,25.6,20.6l0.1,12.9h28.7v4.1H25.3c-19.4,0-20.1,18.8-20.1,18.8 s-0.5,19.3,18.8,19.3h8.3v-13c0-7.3,6.2-13.3,13.6-13.3h19.8c7.4,0,13.4-5.9,13.4-13.1V21.6C79.1,11.3,60.7,8.2,53.7,8.2z M39.3,16 c2.4,0,4.4,1.9,4.4,4.2c0,2.3-2,4.2-4.4,4.2c-2.4,0-4.4-1.9-4.4-4.2C34.9,17.9,36.9,16,39.3,16z" fill="#3776AB"/>
@@ -258,15 +286,15 @@
                                         <div class="absolute -right-1 text-slate-300 bg-white rounded-full"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M7 3l7 7-7 7V3z"/></svg></div>
                                     </div>
                                 </div>
-                                <div class="md:hidden flex flex-col items-center relative h-12 w-full my-2">
-                                    <span class="absolute top-1/2 -translate-y-1/2 translate-x-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider text-center">Carga / Bulk</span>
-                                    <div class="h-full w-[3px] bg-slate-100 overflow-hidden rounded-full relative">
+                                <div class="md:hidden flex flex-col items-center justify-center relative h-12 w-full my-1">
+                                    <span class="bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider text-center shadow-xs z-10 mb-1 border border-slate-200">Carga / Bulk Insert</span>
+                                    <div class="h-6 w-[3px] bg-slate-200 overflow-hidden rounded-full relative">
                                         <div class="w-full h-full bg-gradient-to-b from-transparent via-cyan-400 to-transparent animate-data-flow-vertical" style="animation-delay: 0.4s"></div>
                                     </div>
                                 </div>
 
                                 <!-- Step 3: Azure SQL -->
-                                <div class="flex-none w-[75px] md:w-20 lg:w-24 bg-white border border-slate-200 rounded-xl p-2 lg:p-3 flex flex-col items-center text-center shadow-md relative z-10 hover:border-cyan-400 hover:-translate-y-1 transition-all">
+                                <div class="flex-none w-36 sm:w-44 md:w-20 lg:w-24 bg-white border border-slate-200 rounded-xl p-2.5 sm:p-3 flex flex-col items-center text-center shadow-md relative z-10 hover:border-cyan-400 hover:-translate-y-1 transition-all">
                                     <div class="w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center mb-1 lg:mb-2 shadow-[0_0_12px_rgba(0,188,242,0.3)] rounded-full bg-blue-50/50">
                                         <svg viewBox="0 0 24 24" class="w-[80%] h-[80%]" fill="none">
                                             <ellipse cx="12" cy="6" rx="7" ry="2.5" fill="#00BCF2"/>
@@ -288,15 +316,15 @@
                                         <div class="absolute -right-1 text-slate-300 bg-white rounded-full"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M7 3l7 7-7 7V3z"/></svg></div>
                                     </div>
                                 </div>
-                                <div class="md:hidden flex flex-col items-center relative h-12 w-full my-2">
-                                    <span class="absolute top-1/2 -translate-y-1/2 translate-x-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider text-center">Semantic Model</span>
-                                    <div class="h-full w-[3px] bg-slate-100 overflow-hidden rounded-full relative">
+                                <div class="md:hidden flex flex-col items-center justify-center relative h-12 w-full my-1">
+                                    <span class="bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider text-center shadow-xs z-10 mb-1 border border-slate-200">Semantic Model</span>
+                                    <div class="h-6 w-[3px] bg-slate-200 overflow-hidden rounded-full relative">
                                         <div class="w-full h-full bg-gradient-to-b from-transparent via-yellow-400 to-transparent animate-data-flow-vertical" style="animation-delay: 0.8s"></div>
                                     </div>
                                 </div>
 
                                 <!-- Step 4: Power BI -->
-                                <div class="flex-none w-[75px] md:w-20 lg:w-24 bg-white border border-slate-200 rounded-xl p-2 lg:p-3 flex flex-col items-center text-center shadow-sm relative z-10 hover:border-yellow-400 hover:-translate-y-1 transition-all">
+                                <div class="flex-none w-36 sm:w-44 md:w-20 lg:w-24 bg-white border border-slate-200 rounded-xl p-2.5 sm:p-3 flex flex-col items-center text-center shadow-sm relative z-10 hover:border-yellow-400 hover:-translate-y-1 transition-all">
                                     <div class="w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center mb-1 lg:mb-2">
                                         <svg viewBox="0 0 24 24" class="w-full h-full drop-shadow-sm" fill="none">
                                             <rect x="15" y="4" width="5" height="16" rx="1" fill="#E8B00D"/>
@@ -317,15 +345,15 @@
                                         <div class="absolute -right-1 text-slate-300 bg-white rounded-full"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M7 3l7 7-7 7V3z"/></svg></div>
                                     </div>
                                 </div>
-                                <div class="md:hidden flex flex-col items-center relative h-12 w-full my-2">
-                                    <span class="absolute top-1/2 -translate-y-1/2 translate-x-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider text-center">Embedded API</span>
-                                    <div class="h-full w-[3px] bg-slate-100 overflow-hidden rounded-full relative">
+                                <div class="md:hidden flex flex-col items-center justify-center relative h-12 w-full my-1">
+                                    <span class="bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider text-center shadow-xs z-10 mb-1 border border-slate-200">Embedded API</span>
+                                    <div class="h-6 w-[3px] bg-slate-200 overflow-hidden rounded-full relative">
                                         <div class="w-full h-full bg-gradient-to-b from-transparent via-emerald-400 to-transparent animate-data-flow-vertical" style="animation-delay: 1.2s"></div>
                                     </div>
                                 </div>
 
                                 <!-- Step 5: Web App -->
-                                <div class="flex-none w-[75px] md:w-20 lg:w-24 bg-white border border-slate-200 rounded-xl p-2 lg:p-3 flex flex-col items-center text-center shadow-sm relative z-10 hover:border-emerald-400 hover:-translate-y-1 transition-all">
+                                <div class="flex-none w-36 sm:w-44 md:w-20 lg:w-24 bg-white border border-slate-200 rounded-xl p-2.5 sm:p-3 flex flex-col items-center text-center shadow-sm relative z-10 hover:border-emerald-400 hover:-translate-y-1 transition-all">
                                     <div class="w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center mb-1 lg:mb-2">
                                         <svg viewBox="0 0 24 24" class="w-full h-full drop-shadow-sm" fill="none">
                                             <rect x="2" y="4" width="20" height="16" rx="2" fill="#0F3354" stroke="none"/>
